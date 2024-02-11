@@ -3,39 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Cuaca App</title>
   </head>
   <body>
-    <span class="logo">cuaca</span>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city.." required />
-        <input type="submit" value="🔎" />
-      </form>
-    </header>
-    <main>
-      <h1>Kuala Lumpur</h1>
-      <div class="locationTime">
-        <p class="time">Monday 1:42</p>
-      </div>
-      <div class="locationTemperature">
-        <span id="emoji"> ☀️</span>
-        <span id="temperature">26 ºC</span>
-      </div>
-      <div class="weatherInfo">
-        <span id="humidity"> 70%</span>
-        <p>Humidity</p>
-        <span id="wind">5 km/h</span>
-        <p>Wind</p>
-      </div>
-    </main>
-    <footer>
-      Build by
-      <a href="https://github.com/yanaadeeb" target="_blank"> Adeeb Ibrahim</a>
-      on
-      <a href="https://project-cuaca.netlify.app/" target="_blank">Github</a>
-      and hosted by
-      <a href="https://project-cuaca.netlify.app/" target="_blank"> Netlify.</a>
-    </footer>
+    <div class="mainContainer">
+      <span class="logo">cuaca</span>
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city.." required />
+          <input type="submit" value="🔎" />
+        </form>
+      </header>
+      <main>
+        <h1>Kuala Lumpur</h1>
+        <div class="locationTime">
+          <p class="time">Monday 1:42</p>
+        </div>
+        <div class="locationTemperature">
+          <span id="emoji"> ☀️</span>
+          <span id="temperature">26 ºC</span>
+        </div>
+        <div class="weatherInfo">
+          <span id="humidity"> 70%</span>
+          <p>Humidity</p>
+          <span id="wind">5 km/h</span>
+          <p>Wind</p>
+        </div>
+      </main>
+      <footer>
+        Build by
+        <a href="https://github.com/yanaadeeb" target="_blank">
+          Adeeb Ibrahim</a
+        >
+        on
+        <a href="https://project-cuaca.netlify.app/" target="_blank">Github</a>
+        and hosted by
+        <a href="https://project-cuaca.netlify.app/" target="_blank">
+          Netlify.</a
+        >
+      </footer>
+    </div>
   </body>
 </html>

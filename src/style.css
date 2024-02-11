@@ -1,0 +1,17 @@
+body {
+  background-color: #e8e673;
+  font-family: "PT Sans", sans-serif;
+}
+
+.mainContainer {
+  background: #e0dd3e;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 50px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
