@@ -22,12 +22,13 @@
     <div class="mainContainer">
       <span class="logo">cuaca.</span>
       <header>
-        <form class="searchForm">
+        <form class="searchForm" id="search-form">
           <input
             type="search"
             placeholder="Enter a city.."
             required
             class="search-form-input"
+            id="search-form-input"
           />
           <button type="submit" class="search-form-button">
             <i class="material-icons searchIcon">search</i>
@@ -35,7 +36,7 @@
         </form>
       </header>
       <main>
-        <h1>Kuala Lumpur</h1>
+        <h1 id="city">Kuala Lumpur</h1>
         <div class="locationTime">
           <span class="time">Monday 1:42</span>
         </div>
@@ -72,5 +73,6 @@
         >
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
