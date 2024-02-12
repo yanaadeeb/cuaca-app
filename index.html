@@ -21,8 +21,11 @@
   </head>
   <body>
     <div class="mainContainer">
-      <span class="logo">cuaca.</span>
       <header>
+        <div class="logo">
+          <i class="material-icons webIcon">beach_access</i>
+          <span id="logo">cuaca.</span>
+        </div>
         <form class="searchForm" id="search-form">
           <input
             type="search"
@@ -41,13 +44,17 @@
         <div class="locationTime">
           <span class="time" id="time"></span>
         </div>
-        <i class="material-icons currentWeatherIcon">sunny</i>
-        <br />
-        <span id="description"></span>
+
+        <!-- <span id="description"></span> -->
         <div class="locationTemperature">
+          <i class="material-icons currentWeatherIcon">sunny</i>
           <div class="temperature" id="temperature">26</div>
           <div class="temperatureUnit">ºC</div>
         </div>
+        <div class="description">
+          <span id="description"></span>
+        </div>
+
         <div class="weatherInfo">
           <div class="currentHumidity">
             <i class="material-icons humidityIcon">water_drop</i>

@@ -17,6 +17,7 @@ function updateWeather(response) {
   windElement.innerHTML = response.data.wind.speed;
   console.log(response.data.temperature.current);
   console.log(response.data);
+  console.log(response.data.time);
 }
 
 // formatting date
