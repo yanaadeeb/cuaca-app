@@ -78,11 +78,10 @@ header {
   margin: 30px auto 0px;
 }
 
-.currentWeatherIcon {
-  font-size: 35px !important;
-  position: relative;
-  top: 30px;
-  margin-right: 10px;
+.weatherIcon {
+  width: 88px;
+  height: 88px;
+  margin-top: 5px;
 }
 
 .temperature {
