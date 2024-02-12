@@ -12,7 +12,7 @@ a {
 .mainContainer {
   background: #e0dd3e;
   max-width: 500px;
-  margin: 30px auto;
+  margin: 10px auto;
   padding: 50px;
   border-radius: 15px;
   text-align: center;
@@ -39,36 +39,84 @@ a {
   border-width: 2px;
   border-style: none;
   border-color: black;
-  border-radius: 20px;
-  padding: 5px 20px;
-  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px;
   margin-left: 5px;
   color: #e0dd3e;
 }
 
+.searchIcon {
+  color: #e0dd3e;
+  font-size: 15px !important;
+}
+
+.time {
+  color: black;
+  padding: 2px 20px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+.currentWeatherIcon {
+  font-size: 50px !important;
+  margin: 30px 0 0% 0;
+}
+
+.locationTemperature {
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+}
+
+.temperature {
+  font-size: 150px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.temperatureUnit {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .weatherInfo {
   display: flex;
-  justify-content: space-around;
-  padding: 20px;
+  justify-content: center;
+  padding: 10px;
 }
 
 .currentWind,
+.currentHumidity {
+  flex: 1;
+  max-width: fit-content;
+  background-color: black;
+  color: #e0dd3e;
+  padding: 40px;
+  border-radius: 5px;
+  line-height: 15px;
+  margin: 0px 10px;
+}
+
+/* .currentWind,
 .currentHumidity {
   background-color: black;
   color: #e0dd3e;
   padding: 20px;
   border-radius: 5px;
   line-height: 15px;
-}
+} */
 
-.material-symbols-outlined {
+.humidityIcon,
+.windIcon {
   font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
   font-size: 50px !important;
+  margin: 0px 0px 30px 0px;
 }
 
 #humidity,
 #wind {
-  font-size: 18px;
+  font-size: 25px;
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -83,4 +131,5 @@ footer {
 
 h1 {
   font-family: "Poppins", sans-serif;
+  font-size: 28px;
 }
