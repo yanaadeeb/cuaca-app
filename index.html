@@ -45,29 +45,38 @@
           <span class="time" id="time"></span>
         </div>
 
-        <div class="locationTemperature">
-          <div id="weather-icon"></div>
-          <div class="temperature" id="temperature">26</div>
-          <div class="temperatureUnit">ºC</div>
-        </div>
-        <div class="description">
-          <span id="description"></span>
+        <div class="containerWeatherinfo">
+          <div class="containerCurrentweather">
+            <div class="locationTemperature">
+              <div id="weather-icon"></div>
+              <div class="temperature" id="temperature">26</div>
+              <div class="temperatureUnit">ºC</div>
+            </div>
+            <div class="description">
+              <span id="description"></span>
+            </div>
+          </div>
+
+          <div class="weatherInfo">
+            <div class="currentHumidity">
+              <i class="material-icons humidityIcon">water_drop</i>
+              <br />
+              <span id="humidity"></span>
+              <p>Humidity (%)</p>
+            </div>
+            <div class="currentWind">
+              <i class="material-icons windIcon">air</i>
+              <br />
+              <span id="wind"></span>
+              <p>Wind (km/h)</p>
+            </div>
+          </div>
         </div>
 
-        <div class="weatherInfo">
-          <div class="currentHumidity">
-            <i class="material-icons humidityIcon">water_drop</i>
-            <br />
-            <span id="humidity"></span>
-            <p>Humidity (%)</p>
-          </div>
-          <div class="currentWind">
-            <i class="material-icons windIcon">air</i>
-            <br />
-            <span id="wind"></span>
-            <p>Wind (km/h)</p>
-          </div>
-        </div>
+        <hr />
+        <span class="forecastTitle">Forecast</span>
+
+        <div class="weatherForecast" id="forecast"></div>
       </main>
       <footer>
         Built by

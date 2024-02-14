@@ -17,9 +17,8 @@ function updateWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = response.data.wind.speed;
-  console.log(response.data.temperature.current);
-  console.log(response.data);
-  console.log(response.data.time);
+
+  getForecast(response.data.city);
 }
 
 // formatting date
@@ -57,6 +56,53 @@ function handleSearchSubmit(event) {
   let searchInput = document.querySelector("#search-form-input");
 
   searchCity(searchInput.value);
+}
+
+// format Day for forecast
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
+// forecast
+function getForecast(city) {
+  let apiKey = "d000cdtfc6273ac30e1a54o0329db047";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+function displayForecast(response) {
+  console.log(response.data);
+
+  let forecastHtml = "";
+
+  response.data.daily.forEach(function (day, index) {
+    if (index > 0 && index < 5) {
+      forecastHtml += ` 
+            <div class="forecastDay">
+              <div class="forecastDate">${formatDay(day.time)}</div>
+              <img
+                src="${day.condition.icon_url}"
+                alt=""
+                width="42"
+                id="forecast-icon"
+              />
+              <div class="forecastTemperature">
+                <span class="forecastTemperatureMax">${Math.round(
+                  day.temperature.maximum
+                )}º</span>
+                <span class="forecastTemperatureMin">${Math.round(
+                  day.temperature.minimum
+                )}º</span>
+              </div>
+            </div> 
+          `;
+    }
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form");
